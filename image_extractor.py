@@ -68,9 +68,9 @@ def handle_alerts(driver):
 	alert = WebDriverWait(driver, 15).until(
 		EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Not Now")]'))
 		).click()
-	# alert_2nd = WebDriverWait(driver, 15).until(
-	# 	EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Not Now")]'))
-	# 	).click()
+	alert_2nd = WebDriverWait(driver, 15).until(
+		EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Not Now")]'))
+		).click()
 
 def search_user(driver):
 	'''
@@ -179,7 +179,7 @@ def main():
 	handle_alerts(driver)
 	# Declare the user to extract information from
 	global user_to_search
-	user_to_search = 'dianapopb'
+	user_to_search = 'mabelolea_'
 	# and search for it, going to its profile page
 	search_user(driver)
 	# TODO: check if account is private
